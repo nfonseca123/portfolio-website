@@ -1,25 +1,32 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
+
+//Components
+import NavBar from './components/nav/NavBar';  // Your NavBar component
+
+//Pages
+import Work from './pages/Work';  
+import Skills from './pages/Skills';  
+import Resources from './pages/Resources';
+import DeveloperSetup from './pages/DeveloperSetup';
+
+//Home page
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>  {/* Wrap the app in BrowserRouter to enable routing */}
+      <div className="App">
+        <NavBar />  {/* Navigation bar component */}
+        <Routes>  
+          <Route path="/Work" element={<Work />} />
+          <Route path="/Skills" element={<Skills />} />
+          <Route path="/Resources" element={<Resources />} />
+          <Route path="/DeveloperSetup" element={<DeveloperSetup />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
