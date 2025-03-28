@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/nav/NavBar';  // Your NavBar component
 
 //Pages
+import Home from './pages/Home';
 import Work from './pages/Work';  
 import Skills from './pages/Skills';  
 import Resources from './pages/Resources';
@@ -19,7 +20,8 @@ function App() {
     <Router>  {/* Wrap the app in BrowserRouter to enable routing */}
       <div className="App">
         <NavBar />  {/* Navigation bar component */}
-        <Routes>  
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Work" element={<Work />} />
           <Route path="/Skills" element={<Skills />} />
           <Route path="/Resources" element={<Resources />} />

@@ -1,3 +1,75 @@
-h2{
-    color:aqua;
+*{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+
+#main-content-box{
+    text-align : center;
+}
+
+#home-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-paragraph{
+    text-align: justify;
+    word-wrap: break-word;
+    width: 30%;
+}
+
+/* General styles for the title */
+.typewriter h1 {
+    display: inline-block;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(30, end),
+      blink-caret .75s step-end infinite 3s;
+  }
+  .typewriter{
+    display: inline-block;
+    padding: 30px;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }
+  
+
+  
+
+  
+  
+  
+  div#image-container {
+    width: 300px;
+    height: 200px;
+    background-image: url('../assets/images/cat.jpg');
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 30px;
+  }
+
+  /* Change the background image when the container is hovered */
+  div#image-container:hover {
+    background-image: url('../assets/images/sleepycat.jpg');
+    transform: scale(1.1);
+    transition: 1s;
+  }
