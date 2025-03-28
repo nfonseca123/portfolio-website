@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //Components
 import NavBar from './components/nav/NavBar';  // Your NavBar component
+import Footer from './components/Footer/Footer';
 
 //Pages
 import Home from './pages/Home';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Resources" element={<Resources />} />
           <Route path="/DeveloperSetup" element={<DeveloperSetup />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
